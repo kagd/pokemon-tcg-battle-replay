@@ -1,0 +1,1494 @@
+{
+  "setup": {
+    "coinFlip": {
+      "caller": "Shinwrld",
+      "called": "heads",
+      "result": "win",
+      "firstPlayer": "Shinwrld"
+    },
+    "openingHands": {
+      "Shinwrld": {
+        "size": 7,
+        "cards": []
+      },
+      "gklinsing": {
+        "size": 7,
+        "cards": [
+          "Raikou V",
+          "Ultra Ball",
+          "Prime Catcher",
+          "Basic Lightning Energy",
+          "Boss's Orders",
+          "Area Zero Underdepths",
+          "Bravery Charm"
+        ]
+      }
+    },
+    "initialSetup": {
+      "Shinwrld": {
+        "active": "Drifloon",
+        "bench": [
+          "Ralts"
+        ]
+      },
+      "gklinsing": {
+        "active": "Raikou V",
+        "bench": []
+      }
+    }
+  },
+  "outcome": {
+    "winner": "gklinsing",
+    "finalScore": {
+      "Shinwrld": 4,
+      "gklinsing": 6
+    }
+  },
+  "turns": [
+    {
+      "turns": [
+        {
+          "turnNumber": 1,
+          "player": "Shinwrld",
+          "cardsInHandEndOfTurn": {
+            "Shinwrld": 1
+          },
+          "actions": [
+            {
+              "type": "draw",
+              "cardOrAction": "Basic Psychic Energy",
+              "location": "hand"
+            },
+            {
+              "type": "attach",
+              "cardOrAction": "Basic Psychic Energy",
+              "cardType": "energy",
+              "result": [
+                {
+                  "type": "attach",
+                  "cardOrAction": "Basic Psychic Energy",
+                  "cardType": "energy",
+                  "target": "Drifloon",
+                  "location": "active",
+                  "player": "Shinwrld"
+                }
+              ]
+            }
+          ],
+          "attacks": [],
+          "prizeCardsTaken": {
+            "Shinwrld": 0
+          },
+          "newActivePokemonAfterKnockout": {}
+        }
+      ]
+    },
+    {
+      "turns": [
+        {
+          "turnNumber": 1,
+          "player": "gklinsing",
+          "cardsInHandEndOfTurn": {
+            "gklinsing": 0
+          },
+          "actions": [
+            {
+              "type": "draw",
+              "cardOrAction": "Basic Lightning Energy",
+              "location": "hand",
+              "result": [
+                {
+                  "type": "draw",
+                  "cardOrAction": "Basic Lightning Energy",
+                  "location": "hand",
+                  "player": "gklinsing"
+                }
+              ]
+            },
+            {
+              "type": "ability",
+              "cardOrAction": "Fleet-Footed",
+              "result": [
+                {
+                  "type": "draw",
+                  "cardOrAction": "Forest Seal Stone",
+                  "location": "hand",
+                  "player": "gklinsing"
+                }
+              ]
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Ultra Ball",
+              "cardType": "trainer",
+              "result": [
+                {
+                  "type": "discard",
+                  "cardOrAction": "Bravery Charm",
+                  "location": "discard",
+                  "player": "gklinsing"
+                },
+                {
+                  "type": "discard",
+                  "cardOrAction": "Basic Lightning Energy",
+                  "location": "discard",
+                  "player": "gklinsing"
+                },
+                {
+                  "type": "draw",
+                  "cardOrAction": "Miraidon ex",
+                  "location": "hand",
+                  "player": "gklinsing"
+                },
+                {
+                  "type": "shuffle",
+                  "location": "deck",
+                  "player": "gklinsing"
+                }
+              ]
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Miraidon ex",
+              "cardType": "pokemon",
+              "location": "bench"
+            },
+            {
+              "type": "ability",
+              "cardOrAction": "Tandem Unit",
+              "result": [
+                {
+                  "type": "draw",
+                  "cardOrAction": "Raikou V",
+                  "location": "bench",
+                  "player": "gklinsing"
+                },
+                {
+                  "type": "draw",
+                  "cardOrAction": "Zapdos",
+                  "location": "bench",
+                  "player": "gklinsing"
+                },
+                {
+                  "type": "shuffle",
+                  "location": "deck",
+                  "player": "gklinsing"
+                }
+              ]
+            },
+            {
+              "type": "attach",
+              "cardOrAction": "Basic Lightning Energy",
+              "cardType": "energy",
+              "target": "Raikou V",
+              "location": "active"
+            },
+            {
+              "type": "attach",
+              "cardOrAction": "Forest Seal Stone",
+              "cardType": "trainer",
+              "target": "Raikou V",
+              "location": "active"
+            }
+          ],
+          "attacks": [],
+          "prizeCardsTaken": {
+            "gklinsing": 0
+          },
+          "newActivePokemonAfterKnockout": {}
+        }
+      ]
+    },
+    {
+      "turns": [
+        {
+          "turnNumber": 2,
+          "player": "Shinwrld",
+          "cardsInHandEndOfTurn": {
+            "Shinwrld": 6
+          },
+          "actions": [
+            {
+              "type": "draw",
+              "result": [
+                {
+                  "type": "draw",
+                  "location": "hand",
+                  "player": "Shinwrld"
+                }
+              ]
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Kirlia",
+              "cardType": "pokemon",
+              "result": [
+                {
+                  "type": "play",
+                  "cardOrAction": "Kirlia",
+                  "cardType": "pokemon",
+                  "location": "bench",
+                  "player": "Shinwrld"
+                }
+              ]
+            },
+            {
+              "type": "ability",
+              "cardOrAction": "Refinement",
+              "result": [
+                {
+                  "type": "discard",
+                  "cardOrAction": "Basic Psychic Energy",
+                  "cardType": "energy",
+                  "location": "discard",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "draw",
+                  "location": "hand",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "draw",
+                  "location": "hand",
+                  "player": "Shinwrld"
+                }
+              ]
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Radiant Greninja",
+              "cardType": "pokemon",
+              "result": [
+                {
+                  "type": "play",
+                  "cardOrAction": "Radiant Greninja",
+                  "cardType": "pokemon",
+                  "location": "bench",
+                  "player": "Shinwrld"
+                }
+              ]
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Iono",
+              "cardType": "trainer",
+              "result": [
+                {
+                  "type": "shuffle",
+                  "location": "deck",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "discard",
+                  "location": "deck",
+                  "player": "Shinwrld",
+                  "cardOrAction": "Prime Catcher, Area Zero Underdepths, Boss's Orders"
+                }
+              ]
+            },
+            {
+              "type": "draw",
+              "result": [
+                {
+                  "type": "draw",
+                  "location": "hand",
+                  "player": "Shinwrld"
+                }
+              ]
+            },
+            {
+              "type": "draw",
+              "result": [
+                {
+                  "type": "draw",
+                  "location": "hand",
+                  "player": "Shinwrld",
+                  "cardOrAction": "Electric Generator, Ultra Ball, Area Zero Underdepths, Basic Lightning Energy, Boss's Orders, Electric Generator"
+                }
+              ]
+            },
+            {
+              "type": "ability",
+              "cardOrAction": "Concealed Cards",
+              "result": [
+                {
+                  "type": "discard",
+                  "cardOrAction": "Basic Psychic Energy",
+                  "cardType": "energy",
+                  "location": "discard",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "draw",
+                  "location": "hand",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "draw",
+                  "location": "hand",
+                  "player": "Shinwrld"
+                }
+              ]
+            },
+            {
+              "type": "attach",
+              "cardOrAction": "Basic Psychic Energy",
+              "cardType": "energy",
+              "target": "Drifloon",
+              "result": [
+                {
+                  "type": "attach",
+                  "cardOrAction": "Basic Psychic Energy",
+                  "cardType": "energy",
+                  "location": "active",
+                  "target": "Drifloon",
+                  "player": "Shinwrld"
+                }
+              ]
+            }
+          ],
+          "attacks": [
+            {
+              "attacker": "Drifloon",
+              "move": "Gust",
+              "target": "Raikou V",
+              "damage": 10,
+              "result": "hit"
+            }
+          ],
+          "prizeCardsTaken": {
+            "Shinwrld": 0
+          },
+          "newActivePokemonAfterKnockout": {}
+        }
+      ]
+    },
+    {
+      "turns": [
+        {
+          "turnNumber": 2,
+          "player": "gklinsing",
+          "cardsInHandEndOfTurn": {
+            "gklinsing": 1,
+            "Shinwrld": 0
+          },
+          "actions": [
+            {
+              "type": "draw",
+              "cardOrAction": "Basic Lightning Energy",
+              "location": "hand"
+            },
+            {
+              "type": "ability",
+              "cardOrAction": "Tandem Unit",
+              "result": [
+                {
+                  "type": "play",
+                  "cardOrAction": "Mewtwo ex",
+                  "cardType": "pokemon",
+                  "location": "bench",
+                  "player": "gklinsing"
+                },
+                {
+                  "type": "play",
+                  "cardOrAction": "Iron Hands ex",
+                  "cardType": "pokemon",
+                  "location": "bench",
+                  "player": "gklinsing"
+                },
+                {
+                  "type": "shuffle",
+                  "player": "gklinsing"
+                }
+              ]
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Electric Generator",
+              "cardType": "trainer",
+              "result": [
+                {
+                  "type": "attach",
+                  "cardOrAction": "Basic Lightning Energy",
+                  "cardType": "energy",
+                  "target": "Raikou V",
+                  "location": "bench",
+                  "player": "gklinsing"
+                },
+                {
+                  "type": "attach",
+                  "cardOrAction": "Basic Lightning Energy",
+                  "cardType": "energy",
+                  "target": "Raikou V",
+                  "location": "bench",
+                  "player": "gklinsing"
+                },
+                {
+                  "type": "shuffle",
+                  "player": "gklinsing"
+                }
+              ]
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Electric Generator",
+              "cardType": "trainer",
+              "result": [
+                {
+                  "type": "attach",
+                  "cardOrAction": "Basic Lightning Energy",
+                  "cardType": "energy",
+                  "target": "Iron Hands ex",
+                  "location": "bench",
+                  "player": "gklinsing"
+                },
+                {
+                  "type": "attach",
+                  "cardOrAction": "Basic Lightning Energy",
+                  "cardType": "energy",
+                  "target": "Iron Hands ex",
+                  "location": "bench",
+                  "player": "gklinsing"
+                },
+                {
+                  "type": "shuffle",
+                  "player": "gklinsing"
+                }
+              ]
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Boss's Orders",
+              "cardType": "trainer",
+              "result": [
+                {
+                  "type": "newActivePokemon",
+                  "cardOrAction": "Radiant Greninja",
+                  "location": "active",
+                  "player": "Shinwrld"
+                }
+              ]
+            },
+            {
+              "type": "attach",
+              "cardOrAction": "Basic Lightning Energy",
+              "cardType": "energy",
+              "target": "Raikou V",
+              "location": "active",
+              "player": "gklinsing"
+            }
+          ],
+          "attacks": [
+            {
+              "attacker": "Raikou V",
+              "move": "Lightning Rondo",
+              "target": "Radiant Greninja",
+              "damage": 510,
+              "result": "knockout"
+            }
+          ],
+          "prizeCardsTaken": {
+            "gklinsing": 1,
+            "Shinwrld": 0
+          },
+          "newActivePokemonAfterKnockout": {
+            "Shinwrld": "Drifloon",
+            "gklinsing": "Raikou V"
+          },
+          "prizeCards": [
+            "Boss's Orders"
+          ]
+        }
+      ]
+    },
+    {
+      "turns": [
+        {
+          "turnNumber": 3,
+          "player": "Shinwrld",
+          "cardsInHandEndOfTurn": {
+            "Shinwrld": 5,
+            "gklinsing": 7
+          },
+          "actions": [
+            {
+              "type": "draw",
+              "cardOrAction": "unknown",
+              "location": "hand"
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Ralts",
+              "cardType": "pokemon",
+              "result": [
+                {
+                  "type": "play",
+                  "cardOrAction": "Ralts",
+                  "location": "bench",
+                  "player": "Shinwrld"
+                }
+              ]
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Boss's Orders",
+              "cardType": "trainer",
+              "result": [
+                {
+                  "type": "newActivePokemon",
+                  "cardOrAction": "Zapdos",
+                  "location": "active",
+                  "player": "gklinsing"
+                },
+                {
+                  "type": "retreat",
+                  "cardOrAction": "Raikou V",
+                  "location": "bench",
+                  "player": "gklinsing"
+                }
+              ]
+            },
+            {
+              "type": "ability",
+              "cardOrAction": "Refinement",
+              "result": [
+                {
+                  "type": "discard",
+                  "cardOrAction": "Jacq",
+                  "location": "discard",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "draw",
+                  "cardOrAction": "unknown",
+                  "location": "hand",
+                  "player": "Shinwrld"
+                }
+              ]
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Artazon",
+              "cardType": "trainer",
+              "result": [
+                {
+                  "type": "play",
+                  "cardOrAction": "Artazon",
+                  "location": "stadium",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "draw",
+                  "cardOrAction": "Mimikyu",
+                  "location": "bench",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "shuffle",
+                  "cardOrAction": "deck",
+                  "player": "Shinwrld"
+                }
+              ]
+            },
+            {
+              "type": "retreat",
+              "cardOrAction": "Drifloon",
+              "result": [
+                {
+                  "type": "discard",
+                  "cardOrAction": "Basic Psychic Energy",
+                  "location": "discard",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "newActivePokemon",
+                  "cardOrAction": "Mimikyu",
+                  "location": "active",
+                  "player": "Shinwrld"
+                }
+              ]
+            },
+            {
+              "type": "attach",
+              "cardOrAction": "Basic Psychic Energy",
+              "cardType": "energy",
+              "result": [
+                {
+                  "type": "attach",
+                  "cardOrAction": "Basic Psychic Energy",
+                  "location": "active",
+                  "player": "Shinwrld"
+                }
+              ]
+            }
+          ],
+          "attacks": [],
+          "prizeCardsTaken": {
+            "Shinwrld": 0,
+            "gklinsing": 0
+          },
+          "newActivePokemonAfterKnockout": {},
+          "prizeCards": []
+        }
+      ]
+    },
+    {
+      "turns": [
+        {
+          "turnNumber": 3,
+          "player": "gklinsing",
+          "cardsInHandEndOfTurn": {
+            "gklinsing": 1,
+            "Shinwrld": 0
+          },
+          "actions": [
+            {
+              "type": "draw",
+              "cardOrAction": "Basic Lightning Energy",
+              "location": "hand",
+              "result": [
+                {
+                  "type": "draw",
+                  "cardOrAction": "Basic Lightning Energy",
+                  "location": "hand",
+                  "player": "gklinsing"
+                }
+              ]
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Area Zero Underdepths",
+              "cardType": "Trainer",
+              "location": "Stadium",
+              "result": [
+                {
+                  "type": "discard",
+                  "cardOrAction": "Artazon",
+                  "location": "discard",
+                  "player": "Shinwrld"
+                }
+              ]
+            },
+            {
+              "type": "ability",
+              "cardOrAction": "Tandem Unit",
+              "result": [
+                {
+                  "type": "shuffle",
+                  "cardOrAction": "Tandem Unit",
+                  "player": "gklinsing"
+                }
+              ]
+            },
+            {
+              "type": "attach",
+              "cardOrAction": "Basic Lightning Energy",
+              "cardType": "Energy",
+              "target": "Iron Hands ex",
+              "location": "bench",
+              "result": [
+                {
+                  "type": "attach",
+                  "cardOrAction": "Basic Lightning Energy",
+                  "target": "Iron Hands ex",
+                  "location": "bench",
+                  "player": "gklinsing"
+                }
+              ]
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Boss's Orders",
+              "cardType": "Trainer",
+              "result": [
+                {
+                  "type": "newActivePokemon",
+                  "cardOrAction": "Mimikyu",
+                  "location": "active",
+                  "player": "Shinwrld"
+                }
+              ]
+            },
+            {
+              "type": "ability",
+              "cardOrAction": "Star Alchemy",
+              "result": [
+                {
+                  "type": "draw",
+                  "cardOrAction": "Switch Cart",
+                  "location": "hand",
+                  "player": "gklinsing"
+                },
+                {
+                  "type": "shuffle",
+                  "cardOrAction": "Star Alchemy",
+                  "player": "gklinsing"
+                }
+              ]
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Switch Cart",
+              "cardType": "Trainer",
+              "result": [
+                {
+                  "type": "newActivePokemon",
+                  "cardOrAction": "Zapdos",
+                  "location": "active",
+                  "player": "gklinsing"
+                }
+              ]
+            }
+          ],
+          "attacks": [
+            {
+              "attacker": "Raikou V",
+              "move": "Lightning Rondo",
+              "target": "Kirlia",
+              "damage": 190,
+              "result": "knockout"
+            }
+          ],
+          "prizeCardsTaken": {
+            "gklinsing": 1
+          },
+          "newActivePokemonAfterKnockout": {
+            "Shinwrld": "Mimikyu"
+          },
+          "prizeCards": [
+            "Miraidon ex"
+          ]
+        }
+      ]
+    },
+    {
+      "turns": [
+        {
+          "turnNumber": 4,
+          "player": "Shinwrld",
+          "cardsInHandEndOfTurn": {
+            "Shinwrld": 8
+          },
+          "actions": [
+            {
+              "type": "draw",
+              "cardOrAction": "Unknown",
+              "location": "hand",
+              "result": [
+                {
+                  "type": "draw",
+                  "location": "hand",
+                  "player": "Shinwrld"
+                }
+              ]
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Kirlia",
+              "cardType": "pokemon",
+              "result": [
+                {
+                  "type": "play",
+                  "cardOrAction": "Ralts to Kirlia",
+                  "location": "bench",
+                  "player": "Shinwrld"
+                }
+              ]
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Arven",
+              "cardType": "trainer",
+              "result": [
+                {
+                  "type": "draw",
+                  "cardOrAction": "Nest Ball",
+                  "location": "hand",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "draw",
+                  "cardOrAction": "Deluxe Bomb",
+                  "location": "hand",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "shuffle",
+                  "location": "deck",
+                  "player": "Shinwrld"
+                }
+              ]
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Nest Ball",
+              "cardType": "trainer",
+              "result": [
+                {
+                  "type": "play",
+                  "cardOrAction": "Lumineon V",
+                  "location": "bench",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "shuffle",
+                  "location": "deck",
+                  "player": "Shinwrld"
+                }
+              ]
+            },
+            {
+              "type": "attach",
+              "cardOrAction": "Deluxe Bomb",
+              "cardType": "energy",
+              "target": "Mimikyu",
+              "location": "active",
+              "result": [
+                {
+                  "type": "attach",
+                  "cardOrAction": "Deluxe Bomb",
+                  "location": "active",
+                  "target": "Mimikyu",
+                  "player": "Shinwrld"
+                }
+              ]
+            },
+            {
+              "type": "ability",
+              "cardOrAction": "Refinement",
+              "result": [
+                {
+                  "type": "discard",
+                  "cardOrAction": "Rare Candy",
+                  "location": "discard",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "draw",
+                  "cardOrAction": "Unknown",
+                  "location": "hand",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "draw",
+                  "cardOrAction": "Unknown",
+                  "location": "hand",
+                  "player": "Shinwrld"
+                }
+              ]
+            }
+          ],
+          "attacks": [],
+          "prizeCardsTaken": {
+            "Shinwrld": 0
+          },
+          "newActivePokemonAfterKnockout": {}
+        }
+      ]
+    },
+    {
+      "turns": [
+        {
+          "turnNumber": 4,
+          "player": "gklinsing",
+          "cardsInHandEndOfTurn": {
+            "gklinsing": 1,
+            "Shinwrld": 0
+          },
+          "actions": [
+            {
+              "type": "draw",
+              "cardOrAction": "Area Zero Underdepths",
+              "location": "hand",
+              "result": [
+                {
+                  "type": "draw",
+                  "cardOrAction": "Area Zero Underdepths",
+                  "location": "hand",
+                  "player": "gklinsing"
+                }
+              ]
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Ultra Ball",
+              "cardType": "Trainer",
+              "result": [
+                {
+                  "type": "discard",
+                  "cardOrAction": "Area Zero Underdepths",
+                  "location": "discard",
+                  "player": "gklinsing"
+                },
+                {
+                  "type": "discard",
+                  "cardOrAction": "Miraidon ex",
+                  "location": "discard",
+                  "player": "gklinsing"
+                },
+                {
+                  "type": "draw",
+                  "cardOrAction": "Iron Bundle",
+                  "location": "hand",
+                  "player": "gklinsing"
+                },
+                {
+                  "type": "shuffle",
+                  "cardOrAction": "deck",
+                  "player": "gklinsing"
+                }
+              ]
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Iron Bundle",
+              "cardType": "Pokémon",
+              "location": "bench",
+              "result": [
+                {
+                  "type": "play",
+                  "cardOrAction": "Iron Bundle",
+                  "cardType": "Pokémon",
+                  "location": "bench",
+                  "player": "gklinsing"
+                }
+              ]
+            },
+            {
+              "type": "ability",
+              "cardOrAction": "Hyper Blower",
+              "result": [
+                {
+                  "type": "newActivePokemon",
+                  "target": "Shinwrld's Mimikyu",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "discard",
+                  "cardOrAction": "Iron Bundle",
+                  "location": "discard",
+                  "player": "gklinsing"
+                }
+              ]
+            },
+            {
+              "type": "attach",
+              "cardOrAction": "Basic Lightning Energy",
+              "cardType": "Energy",
+              "target": "Zapdos",
+              "location": "bench",
+              "result": [
+                {
+                  "type": "attach",
+                  "cardOrAction": "Basic Lightning Energy",
+                  "cardType": "Energy",
+                  "target": "Zapdos",
+                  "location": "bench",
+                  "player": "gklinsing"
+                }
+              ]
+            },
+            {
+              "type": "attack",
+              "cardOrAction": "Lightning Rondo",
+              "result": [
+                {
+                  "type": "attack",
+                  "cardOrAction": "Lightning Rondo",
+                  "target": "Shinwrld's Drifloon",
+                  "location": "active",
+                  "player": "gklinsing"
+                }
+              ]
+            }
+          ],
+          "attacks": [
+            {
+              "attacker": "Raikou V",
+              "move": "Lightning Rondo",
+              "target": "Shinwrld's Drifloon",
+              "damage": 190,
+              "result": "knockout"
+            }
+          ],
+          "prizeCardsTaken": {
+            "gklinsing": 1,
+            "Shinwrld": 0
+          },
+          "newActivePokemonAfterKnockout": {
+            "gklinsing": null,
+            "Shinwrld": "Mimikyu"
+          },
+          "prizeCards": [
+            "Basic Lightning Energy"
+          ]
+        }
+      ]
+    },
+    {
+      "turns": [
+        {
+          "turnNumber": 5,
+          "player": "Shinwrld",
+          "cardsInHandEndOfTurn": {
+            "Shinwrld": 5
+          },
+          "actions": [
+            {
+              "type": "draw",
+              "cardOrAction": "Unknown",
+              "location": "hand"
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Drifloon",
+              "cardType": "pokemon",
+              "location": "bench"
+            },
+            {
+              "type": "ability",
+              "cardOrAction": "Refinement",
+              "result": [
+                {
+                  "type": "discard",
+                  "cardOrAction": "Basic Psychic Energy",
+                  "cardType": "energy",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "draw",
+                  "cardOrAction": "Unknown",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "draw",
+                  "cardOrAction": "Unknown",
+                  "player": "Shinwrld"
+                }
+              ]
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Nest Ball",
+              "cardType": "trainer",
+              "result": [
+                {
+                  "type": "draw",
+                  "cardOrAction": "Mew ex",
+                  "cardType": "pokemon",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "play",
+                  "cardOrAction": "Mew ex",
+                  "cardType": "pokemon",
+                  "location": "bench",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "shuffle",
+                  "player": "Shinwrld"
+                }
+              ]
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Gardevoir ex",
+              "cardType": "pokemon",
+              "location": "bench",
+              "result": [
+                {
+                  "type": "play",
+                  "cardOrAction": "Kirlia",
+                  "cardType": "pokemon",
+                  "player": "Shinwrld"
+                }
+              ]
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Judge",
+              "cardType": "trainer",
+              "result": [
+                {
+                  "type": "shuffle",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "shuffle",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "draw",
+                  "cardOrAction": "Basic Lightning Energy",
+                  "cardType": "energy",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "draw",
+                  "cardOrAction": "Unknown",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "draw",
+                  "cardOrAction": "Nest Ball",
+                  "cardType": "trainer",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "draw",
+                  "cardOrAction": "Ultra Ball",
+                  "cardType": "trainer",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "draw",
+                  "cardOrAction": "Basic Lightning Energy",
+                  "cardType": "energy",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "draw",
+                  "cardOrAction": "Area Zero Underdepths",
+                  "cardType": "trainer",
+                  "player": "Shinwrld"
+                }
+              ]
+            },
+            {
+              "type": "attach",
+              "cardOrAction": "Basic Psychic Energy",
+              "cardType": "energy",
+              "target": "Mimikyu",
+              "location": "active"
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Ralts",
+              "cardType": "pokemon",
+              "location": "bench"
+            },
+            {
+              "type": "ability",
+              "cardOrAction": "Restart",
+              "result": [
+                {
+                  "type": "draw",
+                  "cardOrAction": "Unknown",
+                  "player": "Shinwrld"
+                }
+              ]
+            }
+          ],
+          "attacks": [
+            {
+              "attacker": "Mimikyu",
+              "move": "Ghost Eye",
+              "target": "Raikou V",
+              "damage": 70,
+              "result": "hit"
+            }
+          ],
+          "prizeCardsTaken": {
+            "Shinwrld": 0
+          },
+          "newActivePokemonAfterKnockout": {}
+        }
+      ]
+    },
+    {
+      "turns": [
+        {
+          "turnNumber": 5,
+          "player": "gklinsing",
+          "cardsInHandEndOfTurn": {
+            "gklinsing": 7,
+            "Shinwrld": 6
+          },
+          "actions": [
+            {
+              "type": "draw",
+              "cardOrAction": "Arven",
+              "location": "hand"
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Nest Ball",
+              "cardType": "trainer",
+              "result": [
+                {
+                  "type": "draw",
+                  "cardOrAction": "Fezandipiti ex",
+                  "cardType": "pokemon",
+                  "location": "bench",
+                  "player": "gklinsing"
+                },
+                {
+                  "type": "shuffle",
+                  "player": "gklinsing"
+                }
+              ]
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Arven",
+              "cardType": "trainer",
+              "result": [
+                {
+                  "type": "draw",
+                  "cardOrAction": "Electric Generator",
+                  "cardType": "trainer",
+                  "location": "hand",
+                  "player": "gklinsing"
+                },
+                {
+                  "type": "draw",
+                  "cardOrAction": "Rescue Board",
+                  "cardType": "trainer",
+                  "location": "hand",
+                  "player": "gklinsing"
+                },
+                {
+                  "type": "shuffle",
+                  "player": "gklinsing"
+                }
+              ]
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Electric Generator",
+              "cardType": "trainer",
+              "result": [
+                {
+                  "type": "attach",
+                  "cardOrAction": "Basic Lightning Energy",
+                  "cardType": "energy",
+                  "target": "Zapdos",
+                  "location": "bench",
+                  "player": "gklinsing"
+                },
+                {
+                  "type": "shuffle",
+                  "player": "gklinsing"
+                }
+              ]
+            },
+            {
+              "type": "attach",
+              "cardOrAction": "Basic Lightning Energy",
+              "cardType": "energy",
+              "target": "Zapdos",
+              "location": "bench"
+            },
+            {
+              "type": "attach",
+              "cardOrAction": "Rescue Board",
+              "cardType": "trainer",
+              "target": "Raikou V",
+              "location": "active"
+            },
+            {
+              "type": "retreat",
+              "cardOrAction": "Raikou V",
+              "target": "Zapdos",
+              "location": "bench"
+            },
+            {
+              "type": "newActivePokemon",
+              "cardOrAction": "Zapdos",
+              "location": "active"
+            }
+          ],
+          "attacks": [
+            {
+              "attacker": "Zapdos",
+              "move": "Electric Ball",
+              "target": "Mimikyu",
+              "damage": 110,
+              "result": "knockout"
+            }
+          ],
+          "prizeCardsTaken": {
+            "gklinsing": 1,
+            "Shinwrld": 1
+          },
+          "newActivePokemonAfterKnockout": {
+            "Shinwrld": "Drifloon",
+            "gklinsing": "Raikou V"
+          },
+          "prizeCards": [
+            "Radiant Greninja"
+          ]
+        }
+      ]
+    },
+    {
+      "turns": [
+        {
+          "turnNumber": 6,
+          "player": "Shinwrld",
+          "cardsInHandEndOfTurn": {
+            "Shinwrld": 2,
+            "gklinsing": 0
+          },
+          "actions": [
+            {
+              "type": "draw",
+              "cardOrAction": "A card",
+              "location": "hand"
+            },
+            {
+              "type": "attach",
+              "cardOrAction": "Basic Psychic Energy",
+              "cardType": "energy",
+              "target": "Drifloon",
+              "location": "active"
+            },
+            {
+              "type": "retreat",
+              "cardOrAction": "Basic Psychic Energy",
+              "cardType": "energy",
+              "target": "Drifloon",
+              "location": "discard"
+            },
+            {
+              "type": "newActivePokemon",
+              "cardOrAction": "Mew ex",
+              "location": "active"
+            },
+            {
+              "type": "ability",
+              "cardOrAction": "Psychic Embrace",
+              "result": [
+                {
+                  "type": "attach",
+                  "cardOrAction": "Basic Psychic Energy",
+                  "cardType": "energy",
+                  "target": "Mew ex",
+                  "location": "active",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "play",
+                  "cardOrAction": "Put 2 damage counters",
+                  "target": "Mew ex",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "attach",
+                  "cardOrAction": "Basic Psychic Energy",
+                  "cardType": "energy",
+                  "target": "Mew ex",
+                  "location": "active",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "play",
+                  "cardOrAction": "Put 2 damage counters",
+                  "target": "Mew ex",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "attach",
+                  "cardOrAction": "Basic Psychic Energy",
+                  "cardType": "energy",
+                  "target": "Mew ex",
+                  "location": "active",
+                  "player": "Shinwrld"
+                },
+                {
+                  "type": "play",
+                  "cardOrAction": "Put 2 damage counters",
+                  "target": "Mew ex",
+                  "player": "Shinwrld"
+                }
+              ]
+            }
+          ],
+          "attacks": [
+            {
+              "attacker": "Mew ex",
+              "move": "Genome Hacking",
+              "target": "Raikou V",
+              "damage": 200,
+              "result": "knockout"
+            }
+          ],
+          "prizeCardsTaken": {
+            "Shinwrld": 2,
+            "gklinsing": 0
+          },
+          "newActivePokemonAfterKnockout": {
+            "gklinsing": "Raikou V",
+            "Shinwrld": null
+          },
+          "prizeCards": [
+            "A card",
+            "A card"
+          ]
+        }
+      ]
+    },
+    {
+      "turns": [
+        {
+          "turnNumber": 6,
+          "player": "gklinsing",
+          "cardsInHandEndOfTurn": {
+            "gklinsing": 2
+          },
+          "actions": [
+            {
+              "type": "draw",
+              "cardOrAction": "Arven",
+              "location": "hand",
+              "result": [
+                {
+                  "type": "draw",
+                  "cardOrAction": "Arven",
+                  "location": "hand",
+                  "player": "gklinsing"
+                }
+              ]
+            },
+            {
+              "type": "play",
+              "cardOrAction": "Radiant Greninja",
+              "cardType": "pokemon",
+              "location": "bench",
+              "result": [
+                {
+                  "type": "play",
+                  "cardOrAction": "Radiant Greninja",
+                  "cardType": "pokemon",
+                  "location": "bench",
+                  "player": "gklinsing"
+                }
+              ]
+            }
+          ],
+          "attacks": [
+            {
+              "attacker": "Raikou V",
+              "move": "Lightning Rondo",
+              "target": "Mew ex",
+              "damage": 200,
+              "result": "knockout"
+            }
+          ],
+          "prizeCardsTaken": {
+            "gklinsing": 2
+          },
+          "newActivePokemonAfterKnockout": {
+            "Shinwrld": null
+          },
+          "prizeCards": [
+            "Basic Lightning Energy",
+            "Bloodmoon Ursaluna ex"
+          ]
+        }
+      ]
+    }
+  ]
+}

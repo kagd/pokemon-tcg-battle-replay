@@ -1,0 +1,49 @@
+{
+  "setup": {
+    "uploadingPlayer": "gklinsing",
+    "coinFlip": {
+      "caller": "Shinwrld",
+      "called": "heads",
+      "result": "win",
+      "firstPlayer": "Shinwrld"
+    },
+    "openingHands": {
+      "Shinwrld": {
+        "size": 7,
+        "cards": []
+      },
+      "gklinsing": {
+        "size": 7,
+        "cards": [
+          "Raikou V",
+          "Ultra Ball",
+          "Prime Catcher",
+          "Basic Lightning Energy",
+          "Boss's Orders",
+          "Area Zero Underdepths",
+          "Bravery Charm"
+        ]
+      }
+    },
+    "initialSetup": {
+      "Shinwrld": {
+        "active": "Drifloon",
+        "bench": [
+          "Ralts"
+        ]
+      },
+      "gklinsing": {
+        "active": "Raikou V",
+        "bench": []
+      }
+    }
+  },
+  "outcome": {
+    "winner": "gklinsing",
+    "finalScore": {
+      "Shinwrld": 5,
+      "gklinsing": 6
+    }
+  },
+  "turns": []
+}

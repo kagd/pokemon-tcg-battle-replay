@@ -83,6 +83,7 @@ declare namespace PCTGLBattleLog {
   }
 
   type Setup = {
+    uploadingPlayer: string; // Player who uploaded the battle
     coinFlip: {
       caller: string; // Player who called the coin flip
       called: "heads" | "tails"; // The side called by the player
@@ -109,5 +110,6 @@ declare namespace PCTGLBattleLog {
     cardType?: ActionCardType; // Optional, Type of the card
     target?: string; // Target Pokémon for attach or retreat
     location?: ActionLocation; // Where the card was moved to
+    player?: string; // Player ID
   }
 }
