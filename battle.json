@@ -1,0 +1,41 @@
+{
+    "battle": {
+      "players": [
+        {
+          "name": "Shinwrld",
+          "startingPokemon": "Drifloon",
+          "pokemon": [
+            "Drifloon",
+            "Ralts",
+            "Kirlia", 
+            "Gardevoir ex",
+            "Radiant Greninja",
+            "Mimikyu",
+            "Mew ex",
+            "Lumineon V"
+          ],
+          "prizeCardsTaken": 3
+        },
+        {
+          "name": "gklinsing",
+          "startingPokemon": "Raikou V",
+          "pokemon": [
+            "Raikou V",
+            "Miraidon ex",
+            "Zapdos",
+            "Mewtwo ex",
+            "Iron Hands ex",
+            "Iron Bundle",
+            "Fezandipiti ex",
+            "Radiant Greninja"
+          ],
+          "prizeCardsTaken": 6
+        }
+      ],
+      "outcome": {
+        "winner": "gklinsing",
+        "totalTurns": 6,
+        "winningMove": "Raikou V used Lightning Rondo on Mew ex for 200 damage"
+      }
+    }
+  }
