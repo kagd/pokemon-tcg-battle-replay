@@ -2,7 +2,7 @@ import { AzureOpenAI } from "openai";
 import { readFileSync, writeFileSync } from "fs";
 import { join } from "path";
 import { cwd } from "process";
-import { config } from "./config.js";
+import { config } from "../config.js";
 import { processTurns } from "./processTurns.js";
 import { getSetupAndTurnTexts } from "./getSetupAndTurnTexts.js";
 

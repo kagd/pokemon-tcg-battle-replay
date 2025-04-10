@@ -1,5 +1,5 @@
 import { AzureOpenAI } from "openai";
-import { config } from "./config.js";
+import { config } from "../config.js";
 
 export async function getSetupAndTurnTexts(
     client: AzureOpenAI, 
