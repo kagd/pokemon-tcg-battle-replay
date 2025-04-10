@@ -3,8 +3,8 @@ import { readFileSync, writeFileSync } from "fs";
 import { join } from "path";
 import { cwd } from "process";
 import { config } from "../config.js";
-import { processTurns } from "./processTurns.js";
-import { getSetupAndTurnTexts } from "./getSetupAndTurnTexts.js";
+import { processTurns } from "./turns/processTurns.js";
+import { getSetupAndTurnTexts } from "./setup/getSetupAndTurnTexts.js";
 
 const srcDir = join(cwd(), "src");
 const outputDir = join(cwd(), "output");
@@ -13,8 +13,8 @@ async function main() {
   const client = new AzureOpenAI({ endpoint: config.endpoint, apiKey: config.apiKey, deployment: config.deployment, apiVersion: config.apiVersion });
   const battleFilePath = join(srcDir, "../sampleBattleReplays", "battle.txt");
   const battleFile = readFileSync(battleFilePath, "utf-8");
-  const setupPrompt = readFileSync(join(srcDir, "prompts", "systemPrompt.txt"), "utf-8");
-  const turnsPrompt = readFileSync(join(srcDir, "prompts", "turnsPrompt.txt"), "utf-8");
+  const setupPrompt = readFileSync(join(srcDir, "setup", "setupPrompt.txt"), "utf-8");
+  const turnsPrompt = readFileSync(join(srcDir, "turns", "turnsPrompt.txt"), "utf-8");
   const battleDefinition = readFileSync(join(srcDir, "types", "battleLog.d.ts"), "utf-8");
   
   // Step 1: Get the setup, outcome information, and turn text segments
