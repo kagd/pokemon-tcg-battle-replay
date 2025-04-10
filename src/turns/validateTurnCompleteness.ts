@@ -11,7 +11,8 @@ import { config } from "../../config.js";
 export async function validateTurnCompleteness(
     client: AzureOpenAI,
     turnText: string,
-    turnData: PCTGLBattleLog.Turn
+    turnData: PCTGLBattleLog.Turn,
+    uploadedPlayer: string,
 ) {
 
     const prompt = `You are a Pokémon TCG Live battle log validator.
@@ -35,6 +36,12 @@ Return a JSON response in this format:
 
 Do not include any other formatting or information in the response.
 
+Whenever cards are drawn and we know the specific cards drawn, assume that they are for the player that uploaded the battle log.
+The uploading player is ${uploadedPlayer}.
+
+Please note that the battle log may contain some incorrect information. Here are specific ones to adjust the validation:
+When "Iono" is played the battle log will say the player drew cards twice. That is a bug in the battle log that should be corrected in the JSON. The JSON should say that both players drew cards once but we will only know the cards drawn by the uploading player.
+
 Turn text:
 ${turnText}
 
@@ -50,7 +57,6 @@ ${JSON.stringify(turnData)}`;
     });
 
     const validation = JSON.parse(response.choices[0].message.content || "{}");
-    console.log({validation})
 
     if (!validation.isComplete) {
         const errorMessage = `Turn ${turnData.turnNumber} (${turnData.player}'s turn) is missing actions:\n` +

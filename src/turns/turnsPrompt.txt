@@ -20,4 +20,7 @@ How to handle specific actions and results.
 Whenever cards are drawn and we know the specific cards drawn, assume that they are for the player that uploaded the battle log.
 When a card is drawn and is doesn't explicitly say it was played to the bench set the "location" to hand.
 ActionEffectResult.player should be the current turn's player.
+
+Specific cards
 When "Boss's Orders" is played, use the opposing player's ID to the ActionEffectResult.player.
+When "Iono" is played the battle log will say the player drew cards twice. That is a bug in the battle log. It should say that both players shuffle their hands and draw cards.
