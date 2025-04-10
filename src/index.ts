@@ -3,6 +3,8 @@ import { readFileSync, writeFileSync } from "fs";
 import { join } from "path";
 import { cwd } from "process";
 import { config } from "./config.js";
+import { processTurns } from "./processTurns.js";
+import { getSetupAndTurnTexts } from "./getSetupAndTurnTexts.js";
 
 const srcDir = join(cwd(), "src");
 const outputDir = join(cwd(), "output");
@@ -30,116 +32,6 @@ async function main() {
   // Save the complete battle data with turns
   writeFileSync(join(outputDir, "battle.battle-by-turn.json"), JSON.stringify(battleWithTurns, null, 2));
   console.log("Complete battle data with turns saved to battle.battle-by-turn.json");
-}
-
-async function getSetupAndTurnTexts(
-  client: AzureOpenAI, 
-  battleFile: string, 
-  systemPrompt: string, 
-  battleDefinition: string
-): Promise<{ setupAndOutcomeData: PCTGLBattleLog.BattleLog, turnTexts: string[] }> {
-  const prompt = systemPrompt.replace("{{battleDefinition}}", battleDefinition);
-  const userPrompt = `Here is the battle file. Please extract:
-1. The setup information
-2. The outcome information
-3. An array of strings where each string is the complete text of a single turn
-Return as JSON with properties: setup, outcome, and turnTexts (array of strings)
-Battle file:\n${battleFile}`;
-  
-  const response = await client.chat.completions.create({
-    messages: [
-      { role: "system", content: prompt },
-      { role: "user", content: userPrompt }
-    ],
-    temperature: 0.7,
-    model: config.modelName,
-  });
-  
-  console.log(`Setup/Outcome/TurnTexts tokens: ${response.usage?.prompt_tokens}, Completion tokens: ${response.usage?.completion_tokens}, Total tokens: ${response.usage?.total_tokens}`);
-  
-  try {
-    const data = JSON.parse(response.choices[0].message.content || "{}");
-    const setupAndOutcomeData = {
-      setup: data.setup,
-      outcome: data.outcome,
-      turns: [] // Initialize empty turns array
-    };
-    return { 
-      setupAndOutcomeData,
-      turnTexts: data.turnTexts || []
-    };
-  } catch (error) {
-    console.error("Error parsing setup/outcome/turnTexts data:", error);
-    throw error;
-  }
-}
-
-async function processOneTurn(
-  client: AzureOpenAI,
-  turnText: string,
-  turnNumber: number,
-  systemPrompt: string,
-  battleDefinition: string,
-  uploadedPlayer: string,
-) {
-  let attempts = 0;
-  const maxAttempts = 3;
-  
-  while (attempts < maxAttempts) {
-    try {
-      const prompt = systemPrompt.replace("{{battleDefinition}}", battleDefinition);
-      const userPrompt = `The uploadingPlayer is ${uploadedPlayer}. Please process this single turn and return it as a Turn object:\n${turnText}`;
-      
-      const response = await client.chat.completions.create({
-        messages: [
-          { role: "system", content: prompt },
-          { role: "user", content: userPrompt }
-        ],
-        temperature: 0.7,
-        model: config.modelName,
-      });
-      
-      console.log(`Turn ${turnNumber} tokens: ${response.usage?.prompt_tokens}, Completion tokens: ${response.usage?.completion_tokens}, Total tokens: ${response.usage?.total_tokens}`);
-      
-      const turnData = JSON.parse(response.choices[0].message.content || "{}");
-      return turnData;
-    } catch (error) {
-      attempts++;
-      console.error(`Error processing turn ${turnNumber}, attempt ${attempts}/${maxAttempts}:`, error);
-      
-      if (attempts === maxAttempts) {
-        throw new Error(`Failed to process turn ${turnNumber} after ${maxAttempts} attempts: ${error}`);
-      }
-      
-      // Wait for a short time before retrying (exponential backoff)
-      await new Promise(resolve => setTimeout(resolve, Math.pow(2, attempts) * 1000));
-    }
-  }
-}
-
-async function processTurns(
-  client: AzureOpenAI, 
-  turnTexts: string[],
-  setupAndOutcomeData: PCTGLBattleLog.BattleLog,
-  systemPrompt: string, 
-  battleDefinition: string
-) {
-  const turns = [];
-  
-  // Process each turn individually
-  for (let i = 0; i < turnTexts.length; i++) {
-    console.log(`Processing turn ${i + 1} of ${turnTexts.length}...`);
-    const turnData = await processOneTurn(client, turnTexts[i], i + 1, systemPrompt, battleDefinition, setupAndOutcomeData.setup.uploadingPlayer);
-    turns.push(turnData);
-  }
-  
-  // Combine the setup, outcome, and processed turns data
-  const completeData = {
-    ...setupAndOutcomeData,
-    turns
-  };
-  
-  return completeData;
 }
 
 main().catch((err) => {
