@@ -22,6 +22,6 @@
     // "allowJs": true,
     // "outDir": "dist"
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "config.example.ts", "config.ts"],
   "exclude": ["node_modules"]
 }
