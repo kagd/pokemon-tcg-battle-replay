@@ -23,8 +23,9 @@ async function processTurnWithRetry(
       if (!validateTurnStructure(turnData)) {
         throw new Error(`Invalid turn data structure`);
       }
+      console.log(`turnData`, JSON.stringify(turnData, null, 2));
       // Validate that all actions from the text are represented in the JSON
-      await validateTurnCompleteness(client, turnText, turnData);
+      await validateTurnCompleteness(client, turnText, turnData, uploadingPlayer);
       
       return turnData;
     } catch (error) {
