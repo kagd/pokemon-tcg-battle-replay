@@ -13,9 +13,9 @@ const battleFilePath = join(srcDir, "../sampleBattleReplays", "battle.txt");
 const battleFile = readFileSync(battleFilePath, "utf-8");
 
 const setupOutputSchema = z.object({
-  setup: setupSchema,
-  turnBlocks: z.array(z.string()),
-  winner: z.string().describe("The winner of the game."),
+  setup: setupSchema.optional(),
+  turnBlocks: z.array(z.string()).optional(),
+  winner: z.string().describe("The winner of the game.").optional(),
 });
 
 export const processSetupNode = async (state: typeof MessageState.State) => {
