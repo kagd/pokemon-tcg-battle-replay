@@ -51,16 +51,26 @@ Reurn a pass or fail and a reason for the result.`),
     new AIMessage(`Here is the parsed battle log: ${JSON.stringify(state.setup, null, 2)}`),
   ];
 
-  const response = await agentModel.withStructuredOutput(reflectionSchema).invoke(messages);
   const newSetupProcessCount = state.setupProcessCount + 1;
-  if (response.result === "Pass") {
-    return new Command({
-      update: {
-        ...state,
-        setupProcessCount: newSetupProcessCount,
-      },
-      goto: "processTurns",
-    });
+  let response = {
+    result: "Fail",
+    reason: "unknown",
+  };
+  
+  try {
+    response = await agentModel.withStructuredOutput(reflectionSchema).invoke(messages);
+    if (response.result === "Pass") {
+      return new Command({
+        update: {
+          ...state,
+          setupProcessCount: newSetupProcessCount,
+        },
+        goto: "processTurns",
+      });
+    }
+  }
+  catch (error) {
+    console.error("Error during setup reflection:", error);
   }
   
   console.log(`Setup validation failed: ${response.reason}`);

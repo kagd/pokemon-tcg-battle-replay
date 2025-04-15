@@ -5,7 +5,8 @@
   "type": "module",
   "main": "src/index.ts",
   "scripts": {
-    "start": "node --loader ts-node/esm src/index.ts"
+    "start": "node --loader ts-node/esm src/index.ts",
+    "langgraph": "npx @langchain/langgraph-cli@latest dev"
   },
   "keywords": [],
   "author": "",

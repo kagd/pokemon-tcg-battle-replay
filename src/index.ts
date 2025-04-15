@@ -14,8 +14,7 @@ const workflow = new StateGraph(MessageState)
   .addEdge("reflectionSetupNode", "processTurns")
   .addEdge("processTurns", "processTurn");
 
-const app = workflow.compile();
-
+export const app = workflow.compile();
 (async function main() {
   const state = await app.invoke({});
   console.log(JSON.stringify(state, null, 2));

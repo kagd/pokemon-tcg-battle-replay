@@ -1,3 +1,5 @@
 node_modules
 config.ts
 .env
+# LangGraph API
+.langgraph_api
