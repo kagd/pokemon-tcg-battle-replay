@@ -1,12 +1,11 @@
 import { z } from 'zod';
-import { MessageState, setupSchema } from './schema.js';
+import { MessageState, setupSchema, reflectionSchema } from './schema.js';
 import { AIMessage, HumanMessage, SystemMessage } from '@langchain/core/messages';
 import { Command, END } from '@langchain/langgraph';
 import { cwd } from 'process';
 import { join } from 'path';
 import { readFileSync } from 'fs';
 import { agentModel } from './agent.js';
-import { reflectionSchema } from './reflection.js';
 
 const uploadingPlayer = "gklinsing";
 const srcDir = join(cwd(), "src");
@@ -19,7 +18,7 @@ const setupOutputSchema = z.object({
   winner: z.string().describe("The winner of the game."),
 });
 
-export const setupNode = async (state: typeof MessageState.State) => {
+export const processSetupNode = async (state: typeof MessageState.State) => {
   const messages = [
     new SystemMessage(`You are a Pokèmon TCG Live battle log parsing assistant.
 Gather the opening cards drawn for each player.
@@ -42,7 +41,7 @@ Get the turn blocks for each player.`),
   })
 };
 
-export const reflectionSetupNode = async (state: typeof MessageState.State) => {
+export const processSetupReflectionNode = async (state: typeof MessageState.State) => {
   const messages = [
     new SystemMessage(`You are a Pokèmon TCG Live battle log validation assistant.
 Varify that the "uploadingPlayer" is ${uploadingPlayer}.

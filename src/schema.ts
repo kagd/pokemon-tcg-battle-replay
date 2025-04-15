@@ -60,6 +60,11 @@ export const turnSchema = z.object({
   prizeCards: z.array(z.string()).optional(), // List of prize cards taken this turn
 });
 
+export const reflectionSchema = z.object({
+  result: z.enum(["Pass", "Fail"]),
+  reason: z.string(),
+});
+
 // Helper function to create an Annotation with default value behavior
 function AnnotationWithDefault<T>(defaultValue: T) {
   return Annotation<T>({

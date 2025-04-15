@@ -1,21 +1,22 @@
 import 'dotenv/config'
 import { StateGraph, START } from "@langchain/langgraph";
 import { MessageState } from './schema.js';
-import { reflectionSetupNode, setupNode } from './processSetup.js';
-import { processTurns, processTurn } from './turn.js';
+import { processSetupReflectionNode, processSetupNode } from './processSetup.js';
+import { processTurnNode } from './processTurn.js';
+import { processTurnsNode } from './processTurns.js';
 
 const workflow = new StateGraph(MessageState)
-  .addNode("setupNode", setupNode)
-  .addNode("reflectionSetupNode", reflectionSetupNode)
-  .addNode("processTurns", processTurns)
-  .addNode("processTurn", processTurn, {ends: ["processTurns"]})
-  .addEdge(START, "setupNode")
-  .addEdge("setupNode", "reflectionSetupNode")
-  .addEdge("reflectionSetupNode", "processTurns")
+  .addNode("processSetup", processSetupNode)
+  .addNode("processSetupReflection", processSetupReflectionNode)
+  .addNode("processTurns", processTurnsNode)
+  .addNode("processTurn", processTurnNode, {ends: ["processTurns"]})
+  .addEdge(START, "processSetup")
+  .addEdge("processSetup", "processSetupReflection")
+  .addEdge("processSetupReflection", "processTurns")
   .addEdge("processTurns", "processTurn");
 
 export const app = workflow.compile();
-(async function main() {
-  const state = await app.invoke({});
-  console.log(JSON.stringify(state, null, 2));
-})();
+// (async function main() {
+//   const state = await app.invoke({});
+//   console.log(JSON.stringify(state, null, 2));
+// })();
